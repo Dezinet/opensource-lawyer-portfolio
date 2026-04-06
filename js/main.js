@@ -111,18 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (announcementBar && closeBtn) {
         const header = document.getElementById('main-header');
         
-        // Re-enable persistence
-        if (localStorage.getItem('announcementClosed') === 'true') {
-            announcementBar.classList.add('hidden');
-            document.body.style.setProperty('--top-offset', '0px');
-            if (header) header.style.top = '0px';
-        }
-
         closeBtn.addEventListener('click', () => {
             announcementBar.classList.add('hidden');
             document.body.style.setProperty('--top-offset', '0px');
             if (header) header.style.top = '0px';
-            localStorage.setItem('announcementClosed', 'true');
         });
     }
 
