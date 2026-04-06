@@ -1,0 +1,17 @@
+# Artifacts and logs
+artifacts/
+*.log
+tmp/
+.gemini/
+.env
+
+# MacOS hidden files
+.DS_Store
+
+# IDE configuration
+.vscode/
+
+# Local data
+brain/
+history/
+conversations/

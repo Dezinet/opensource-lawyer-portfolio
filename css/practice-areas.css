@@ -1,0 +1,44 @@
+/* --- INTERNAL PRACTICE ROWS --- */
+.practice-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.practice-image { position: relative; }
+.practice-image img { border-radius: var(--radius); box-shadow: var(--shadow-lg); }
+.practice-label-box { position: absolute; bottom: -20px; background: var(--accent); color: white; padding: 20px 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+.label-right { right: -20px; }
+.label-left { left: -20px; }
+
+.practice-info h3 { font-size: 2.2rem; margin-bottom: 1rem; }
+.practice-info p { font-size: 1.1rem; color: var(--text-body); margin-bottom: 2rem; }
+
+/* --- CASE TYPES LIST --- */
+.case-types { margin-top: 30px; display: grid; gap: 15px; }
+.case-item { display: flex; align-items: flex-start; gap: 15px; font-weight: 600; color: var(--text-dark); }
+.case-item i { color: var(--accent); margin-top: 5px; }
+
+/* --- FAQ ACCORDION --- */
+.faq-grid { max-width: 800px; margin: 60px auto 0; }
+.faq-item { background: var(--bg-white); border: 1px solid var(--border); margin-bottom: 15px; border-radius: var(--radius); overflow: hidden; }
+.faq-header { width: 100%; padding: 25px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; text-align: left; font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-dark); font-weight: 700; transition: var(--transition); }
+.faq-header:hover { color: var(--accent); }
+.faq-content { padding: 0 25px 25px; color: var(--text-muted); display: none; line-height: 1.8; }
+.faq-item.active .faq-content { display: block; border-top: 1px solid var(--border); padding-top: 25px; background: var(--bg-light); }
+.faq-item.active .faq-header { color: var(--accent); background: var(--bg-light); }
+
+/* --- RESPONSIVENESS (PRACTICE) --- */
+@media (max-width: 1024px) {
+    .practice-row { grid-template-columns: 1fr !important; text-align: center; gap: 60px; }
+    .practice-image { max-width: 500px; margin: 0 auto; }
+    .practice-label-box { position: static; display: inline-block; margin-top: 20px; }
+    .case-item { justify-content: center; text-align: left; }
+}
+
+@media (max-width: 768px) {
+    .practice-info h3 { font-size: 1.8rem; }
+    .faq-header { padding: 20px; font-size: 1rem; }
+}

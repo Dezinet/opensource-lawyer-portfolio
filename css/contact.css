@@ -1,0 +1,43 @@
+/* --- CONTACT INFO BLOCKS --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 100px;
+}
+
+.contact-info { display: flex; flex-direction: column; gap: 40px; }
+
+.contact-method { border-left: 1px solid var(--border); padding-left: 30px; transition: var(--transition); }
+.contact-method:hover { border-left-color: var(--accent); transform: translateX(5px); }
+.contact-method i { font-size: 1.8rem; color: var(--accent); margin-bottom: 20px; display: block; }
+.contact-method h4 { font-family: 'Inter', sans-serif; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 10px; }
+.contact-method p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 0; }
+
+/* --- CONTACT FORM --- */
+.form-box { background: var(--bg-tint); padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-sm); position: relative; overflow: hidden; }
+.form-box::before { content: ''; position: absolute; top:0; left:0; width: 5px; height: 100%; background: var(--accent); }
+
+.contact-form .section-label { color: var(--accent); margin-bottom: 1rem; display: block; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 3px; }
+.contact-form h3 { font-size: 2.2rem; margin-bottom: 3rem; }
+
+.form-group { margin-bottom: 30px; }
+.form-group label { display: block; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 18px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-white); color: var(--text-dark); transition: var(--transition); }
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); }
+
+/* --- MAP --- */
+.map-container { height: 350px; width: 100%; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; margin-top: 40px; box-shadow: var(--shadow-sm); }
+.map-container iframe { width: 100%; height: 100%; filter: grayscale(0.5); border: none; }
+
+/* --- RESPONSIVENESS (CONTACT) --- */
+@media (max-width: 1024px) {
+    .contact-container { grid-template-columns: 1fr; gap: 60px; }
+    .form-box { padding: 40px; }
+    .contact-info { gap: 30px; }
+}
+
+@media (max-width: 768px) {
+    .form-box { padding: 30px; }
+    .contact-form h3 { font-size: 1.8rem; }
+}
